@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="login-header" >
+    <div class="padding">
+      <img class="grandlogo-img" src="../../assets/img/logo.png">
+    </div>
+  </div>
+
+  <div class="center">
+    <form [formGroup]="loginForm"  (ngSubmit)="submit()" name="loginForm" >
+    <div class="heading-column-lr">
+
+    </div>
+
+    <ion-item transparent>
+      <ion-input formControlName="email" placeholder="Adresse email" type="text"></ion-input>
+      <ion-icon name="person" style="color: #004247"></ion-icon>
+    </ion-item>
+    <ion-item transparent>
+      <ion-input formControlName="password" placeholder="Mot de passe" type="Password"></ion-input>
+      <ion-icon name="lock-closed" style="color: #004247"></ion-icon>
+    </ion-item>
+    <div linespace></div>
+    <ion-label class="forgetpassword">Mot de passe oublié ?</ion-label>
+
+    <div linespace></div>
+    <ion-button  [disabled]="!loginForm.valid " type="submit" class="ion-button-class" expand="block" fill="solid" >Se connecter</ion-button>
+    <div linespace></div>
+    </form>
+    <ion-label class="ion-text-center" (click)='onClickRegister()'>Vous n'avez pas un compte ?</ion-label>
+  </div>
+</ion-content>

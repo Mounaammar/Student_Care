@@ -1,27 +1,118 @@
-#container {
-  text-align: center;
+ion-tabs, ion-toolbar, ion-header{
+  --ion-background-color: #ffffff !important;
+  --background: #ffffff!important;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+ion-content{
+  --ion-background-color: #004247 !important;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+ion-tab-button {
 
-  color: #8c8c8c;
+  color:#004247 !important;
+}
+ion-tab-button{
+  ion-img{
+      width: 80px;
+     height: 180px;
+  }
+}
 
+
+ion-segment{
+  --background: #ffffff !important;
+  border-radius : 0 !important;
+  color: white !important;
+  padding-top: 18px;
+  ion-segment-button {
+      --color:#004247 !important;
+      // --color-checked: #FCCE06 !important;
+     --background-hover: #004247 !important;
+     --background-focused : #004247 !important;
+    --indicator-color : #D36C6C !important;
+    --color-checked :#D36C6C !important;
+  }
+ 
+}
+.recommandation, .destinationPertinente{
+  ion-card{
+    --background: white !important;
+  }
+  
+  ion-card-content{
+    color: #004247 !important;  
+   text-align: start;
+  }
+  ion-card-title{
+  
+    color: #D36C6C !important;
+  }
+}
+
+.MARGIN{
+  margin-right: 25px !important;
+}
+.quote{
+ ion-card-content{
+  background-color: #D36C6C !important;
+  border-radius: 12px;
+  position: relative;
+  top: -14px;
+ }
+
+}
+.destinationJour{
+  ion-card{
+    --background: white !important;
+   // text-align:justify
+  }
+}
+ion-card-title{
+  color: #D36C6C;
+  font-size:18px ;
+}
+ion-card-subtitle{
+  color: #BABDC9;
+  font-size:12px ;
+}
+.detail{
+  color: #D36C6C;
+  text-decoration: underline;
+  // position: absolute;
+ margin-left: 80px;
+
+
+}
+.bold{
+  font-weight: bold;
+}
+.imagePost{
+  border-radius: 12px;
+}
+
+
+  .imgProfilPoster{
+    color: #004247;
+      border-radius: 300px ; 
+      //  width: 30px ;
+      //  height: 30px;
+      //  margin-top: 10px;
+      //  margin-left: 10px;
+   };
+.entete{
+  --border-color:#6A6A6A;
+  padding: 0;
   margin: 0;
 }
-
-#container a {
-  text-decoration: none;
+.nomProfil{
+  color: #004247;
+  font-size: 11px;
+  font-weight: bold;
+ // margin-left: 7px;
+}
+.commentaire{
+  font-size: 10px;
+  color: #7A8FA6;
 }

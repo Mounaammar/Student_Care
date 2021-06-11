@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tour Eiffel
+
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+<div class="entete">
+ 
+    <img src="assets/img/super-deco.jpg" >
+
+
+<h1 class="titreEntete  " >Où manger</h1>
+
+</div>
+
+<ion-card class="quote">
+
+  <img src="assets/img/resto.png"/>
+    <ion-card-content >
+     <ion-input type="search" placeholder="Rechercher"><ion-icon name="search-sharp"></ion-icon></ion-input>
+    </ion-card-content>
+</ion-card>
+<div class="filtre">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <span>Trier par : </span>
+      </ion-col>
+      <ion-col size="8">
+        <ion-select value="nom" okText="Ok" cancelText="Annuler">
+          <ion-select-option value="nom">Nom</ion-select-option>
+          <ion-select-option value="distance">Distance</ion-select-option>
+          <ion-select-option value="date">Date</ion-select-option>
+        
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</div>
+<div class="resto">
+
+  <ion-card >
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+    <img src="./assets/img/restoEiffel2.jpg" style="border-radius: 11px 0 0 11px ;" />
+  </ion-col>
+    <ion-col size="4">
+      <ion-row>
+        <ion-col size="12">
+          <img src="assets/img/restoEiffel3.jpg" style="border-radius: 0 9px 9px 0;" />
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <img src="assets/img/restoEiffel1.jpg" style="border-radius: 0 9px 9px 0;" />
+      </ion-col>
+    </ion-row>
+    
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+      <ion-card-title class="ion-text-center">58 Tour Eiffel Restaurant </ion-card-title>
+      <ion-card-subtitle class="ion-text-center">200 m loin de vous</ion-card-subtitle>
+  
+  
+  </ion-card>
+
+
+</div>
+</ion-content>

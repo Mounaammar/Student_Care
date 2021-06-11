@@ -1,20 +1,373 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="ion-no-border" >
+  <ion-toolbar >
+   
+   <ion-tabs >
+    <ion-tab-bar>
+      <ion-tab-button tab="home" style="font-size:7px">
+        <!-- <ion-img src="assets/img/logo.png" ></ion-img> -->
+         
+      </ion-tab-button>
+      <ion-tab-button tab="search" style="font-size:7px" >
+        <ion-item >
+          <ion-label style="color: #004247 !important;">
+            <ion-icon size="medium"  name="notifications-sharp" style="margin-top: 15px;"></ion-icon>
+            <ion-icon size="medium"   name="location-sharp" style="margin-left: 10px;margin-top: 15px;"></ion-icon>
+          </ion-label>
+        </ion-item>
+      
+      </ion-tab-button>
+
+
+    </ion-tab-bar>
+  </ion-tabs>
+  
   </ion-toolbar>
+
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content  fullscreen>
+  <!-- navbar -->
+  <ion-segment scrollable value="heart" mode="md">
+    <ion-segment-button value="home">
+      <ion-label style="font-size: 10px;"  >Endroits</ion-label>
+  
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-label style="font-size: 10px;">Rechercher</ion-label>
+     
+    </ion-segment-button>
+  
+  </ion-segment> 
+<!-- content -->
+<!-- <div > -->
+
+<ion-grid >
+<ion-row>
+  <ion-col size="1">
+  
+    <hr width="2px" style="height: 35px;margin-top: 14px;" color="white">
+  </ion-col>
+  <ion-col size="11">
+    <h1 style="color: white;font-family: Aldhabi ;">Nos recommandations </h1>
+  </ion-col>
+  
+
+</ion-row>
+</ion-grid>
+<!-- 
+<div class="recommandation">
+
+    <ion-slides>
+    <ion-slide *ngFor="let endroit of recupEndroits()">
+    <ion-card>
+      <img src="{{endroit.image}}" />
+      <ion-card-header>
+        <ion-card-title>{{endroit.nom}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid >
+          <ion-row>
+            <ion-col size="1">
+              <ion-icon name="location-sharp"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+              <p>{{endroit.adresse}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="1">
+              <ion-icon name="time-sharp"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+              <p> Ouvert . Ferme à {{endroit.horaire}}h</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="1">
+              <ion-icon name="star"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+              <p>Avis des visiteurs : {{endroit.avis}}/5</p>
+            </ion-col>
+          </ion-row>
+          </ion-grid>
+          
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-slide>
+
+
+
+  
+</ion-slides>
+</div> -->
+
+<ion-card class="quote">
+
+  <img src="assets/img/travel.png"/>
+    <ion-card-content style="color: white !important;">
+      Trouvez directement les destinations 
+      que vous pouvez visiter en tapant le nom de la ville visée 
+      </ion-card-content>
+
+  
+</ion-card>
+
+<div class="destinationJour">
+  <ion-grid >
+    <ion-row>
+      <ion-col size="1">
+      
+        <hr width="2px" style="height: 35px;margin-top: 14px;" color="white">
+      </ion-col>
+      <ion-col size="11">
+        <h1 style="color: white;font-family: Aldhabi ;">Destination du jour </h1>
+      </ion-col>
+      
+    
+    </ion-row>
+    </ion-grid>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="bold">Strasbourg – Alsace</ion-card-title>
+        <ion-card-subtitle><ion-icon name="earth-sharp"></ion-icon> Il y a 3h</ion-card-subtitle>
+     
+      </ion-card-header>
+      <ion-card-content>
+       <p> Un peu comme Bordeaux, Strasbourg est à la fois étudiante,
+        historique, culturelle et gastronomique.
+        
+        Le premier site à visiter reste la Cathédrale de Strasbourg, situé
+        en plein milieu du centre-ville.</p>
+      
+        <span class="detail bold">Plus de détails</span>
+  <img  class="imagePost" src="assets/img/stra.jpg"/>
+<p style="color: #747EA0; font-size: 10px;"> 30 commentaires  &  1,5k réactions </p>
+<ion-grid >
+  <ion-row>
+    <ion-col size="2">
+<ion-icon name="heart-sharp"></ion-icon>
+    </ion-col>
+    <ion-col size="2">
+<ion-icon name="chatbubble-ellipses-sharp"></ion-icon>
+</ion-col>
+<ion-col size="2">
+<ion-icon name="arrow-redo-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+</ion-row>
+</ion-grid>
+<hr width="100%"  style=" background-color:  #00424746 !important; ">
+<div class="commentaires">
+   <ion-row class="ion-no-padding ion-no-margin ">
+    <ion-col size="2"  class="ion-no-padding ion-no-margin ">
+      <img class="imgProfilPoster" src="assets/img/Image1.png" />
+    </ion-col>
+    <ion-col size="9">
+      <p class="nomProfil"  >Michael Bruno</p>
+      <p class="commentaire">j'ai passé mes vacances de l'année dernière là-bas et je vous assure que c'est super beau  </p>
+    </ion-col>
+</ion-row> 
+
+<!-- <ion-item class="ion-no-padding ion-no-margin" style="--border-color: #2B2B2B !important">
+  <img class="imgProfilPoster" src="assets/img/profil.jpg"  />
+  <p class="nomProfil"  >nom</p>
+
+  </ion-item> -->
+
+</div>
+      </ion-card-content>
+    </ion-card>
+</div>
+ <div class="destinationPertinente">
+  <ion-grid >
+    <ion-row>
+      <ion-col size="1">
+      
+        <hr width="2px" style="height: 35px;margin-top: 14px;" color="white">
+      </ion-col>
+      <ion-col size="11">
+        <h1 style="color: white;font-family: Aldhabi ;">Destinations pertinentes </h1>
+      </ion-col>
+      
+    
+    </ion-row>
+    </ion-grid>
+
+    <ion-slides>
+      <ion-slide>
+      <ion-card>
+        <img src="assets/img/paris.jpg" />
+        <ion-card-header>
+          <ion-card-title>Tour Eiffel</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid >
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="location-sharp"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Paris, France</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="time-sharp"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p> Ouvert . Ferme à 19h</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="star"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Avis des visiteurs : 4.5/5</p>
+              </ion-col>
+            </ion-row>
+            </ion-grid>
+            
+        </ion-card-content>
+      </ion-card>
+    
+    </ion-slide>
+    <ion-slide>
+  
+      <ion-card>
+        <img src="assets/img/paris.jpg" />
+        <ion-card-header>
+          <ion-card-title>Tour Eiffel</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid >
+            <ion-row class="ion-margin">
+              <ion-col size="1" >
+                <ion-icon name="location-sharp" ></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Paris, France</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="time-sharp" class="MARGIN"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p> Ouvert . Ferme à 19h</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="star" class="MARGIN"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Avis des visiteurs : 4.5/5</p>
+              </ion-col>
+            </ion-row>
+            </ion-grid>
+            
+        </ion-card-content>
+      </ion-card>
+    </ion-slide> 
+  
+     <ion-slide>
+      <ion-card class="ion-text-start">
+        <img src="assets/img/paris.jpg" />
+        <ion-card-header >
+          <ion-card-title  >Tour Eiffel</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid >
+            <ion-row >
+              <ion-col size="1" class="ion-text-start">
+                <ion-icon name="location-sharp"></ion-icon>
+              </ion-col>
+              <ion-col size="11" >
+                <p>Paris, France</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="time-sharp"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p> Ouvert . Ferme à 19h</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="star"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Avis des visiteurs : 4.5/5</p>
+              </ion-col>
+            </ion-row>
+            </ion-grid>
+            
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  
+    <ion-slide>
+      <ion-card>
+        <img src="assets/img/paris.jpg" />
+        <ion-card-header>
+          <ion-card-title>Tour Eiffel</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid >
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="location-sharp"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Paris, France</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="time-sharp"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p> Ouvert . Ferme à 19h</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-icon name="star"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <p>Avis des visiteurs : 4.5/5</p>
+              </ion-col>
+            </ion-row>
+            </ion-grid>
+            
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  
+  </ion-slides>
+ </div>
+<!-- menu bottom -->
+ 
 </ion-content>
+

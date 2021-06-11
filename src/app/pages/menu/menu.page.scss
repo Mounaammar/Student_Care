@@ -1,0 +1,25 @@
+
+ion-tab-button {
+
+    color: #004247 !important;
+}
+ion-tab-button{
+    ion-img{
+        width: 150px;
+        height: 850px;
+    }
+}
+
+ion-tabs, ion-toolbar, ion-header{
+    --ion-background-color: white !important;
+    --background: white !important;
+  
+}
+ion-tab-button:hover{
+   
+    --color-selected:#004247 !important;
+}
+
+ion-content{
+    --ion-background-color: white !important;
+}
