@@ -1,82 +1,195 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tour Eiffel
-
-    </ion-title>
+  
     <ion-buttons slot="start">
-      <ion-back-button text="" ></ion-back-button>
+      <ion-back-button text="" defaultHref="/menu/menu/home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content fullscreen>
-<div class="entete">
+   <!-- navbar -->
+   <div class="destinationJour">
  
-    <img src="assets/img/super-deco.jpg" >
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="bold">{{endroit.nom}}</ion-card-title>
+        <ion-card-subtitle><ion-icon name="earth-sharp"></ion-icon> {{endroit.datePost}}</ion-card-subtitle>
+     
+      </ion-card-header>
+      <ion-card-content>
+       <p > {{endroit.description}}</p>
+      
+      
+  <img  class="imagePost" src="{{endroit.image}}" width="100%"/>
+ <p style="color: #747EA0; font-size: 10px;"> {{endroit.commentaire.length}} commentaires & {{endroit.nbReaction}} réactions</p>
 
-
-<h1 class="titreEntete  " >Où manger</h1>
-
-</div>
-
-<ion-card class="quote">
-
-  <img src="assets/img/resto.png"/>
-    <ion-card-content >
-     <ion-input type="search" placeholder="Rechercher"><ion-icon name="search-sharp"></ion-icon></ion-input>
-    </ion-card-content>
-</ion-card>
-<div class="filtre">
-  <ion-grid>
-    <ion-row>
-      <ion-col size="4">
-        <span>Trier par : </span>
-      </ion-col>
-      <ion-col size="8">
-        <ion-select value="nom" okText="Ok" cancelText="Annuler">
-          <ion-select-option value="nom">Nom</ion-select-option>
-          <ion-select-option value="distance">Distance</ion-select-option>
-          <ion-select-option value="date">Date</ion-select-option>
-        
-        </ion-select>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-
-</div>
-<div class="resto">
-
-  <ion-card >
-    <ion-grid>
-      <ion-row>
-        <ion-col size="8">
-    <img src="./assets/img/restoEiffel2.jpg" style="border-radius: 11px 0 0 11px ;" />
-  </ion-col>
-    <ion-col size="4">
-      <ion-row>
-        <ion-col size="12">
-          <img src="assets/img/restoEiffel3.jpg" style="border-radius: 0 9px 9px 0;" />
-        </ion-col>
-      </ion-row>
-
-    <ion-row>
-      <ion-col size="12">
-        <img src="assets/img/restoEiffel1.jpg" style="border-radius: 0 9px 9px 0;" />
-      </ion-col>
-    </ion-row>
-    
+<!-- notation -->
+<!-- ***************1***************** -->
+ <ion-grid *ngIf="endroit.avis==1">
+  <ion-row>
+    <ion-col size="2">
+<ion-icon class="heart" name="heart-sharp" (click)="incrementReaction()"></ion-icon>
     </ion-col>
-  </ion-row>
-  </ion-grid>
+    <ion-col size="2">
+<ion-icon name="chatbubble-ellipses-sharp"  (click)="openModal()"></ion-icon>
+</ion-col>
+<ion-col size="2">
+<ion-icon name="arrow-redo-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+</ion-row>
+</ion-grid>
+<!-- ***************2***************** -->
+<ion-grid *ngIf="endroit.avis==2">
+  <ion-row>
+    <ion-col size="2">
+      <ion-icon class="heart" name="heart-sharp"   (click)="incrementReaction()"></ion-icon>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon name="chatbubble-ellipses-sharp"  (click)="openModal()"></ion-icon>
+</ion-col>
+<ion-col size="2">
+<ion-icon name="arrow-redo-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+</ion-row>
+</ion-grid>
+<!-- ***************3***************** -->
+<ion-grid *ngIf="endroit.avis==3" >
+  <ion-row>
+    <ion-col size="2">
+      <ion-icon class="heart" name="heart-sharp"   (click)="incrementReaction()"></ion-icon>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon name="chatbubble-ellipses-sharp"  (click)="openModal()"></ion-icon>
+</ion-col>
+<ion-col size="2">
+<ion-icon name="arrow-redo-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+</ion-row>
+</ion-grid>
+<!-- ***************4***************** -->
+<ion-grid *ngIf="endroit.avis==4">
+  <ion-row>
+    <ion-col size="2">
+      <ion-icon class="heart" name="heart-sharp"   (click)="incrementReaction()"></ion-icon>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon name="chatbubble-ellipses-sharp" class="heart" (click)="openModal()"></ion-icon>
+</ion-col>
+<ion-col size="2">
+<ion-icon name="arrow-redo-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp"></ion-icon>
+</ion-col>
+</ion-row>
+</ion-grid>
+<!-- ***************5***************** -->
+<ion-grid *ngIf="endroit.avis==5">
+  <ion-row>
+    <ion-col size="2">
+      <ion-icon class="heart" name="heart-sharp"  (click)="incrementReaction()"></ion-icon>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon name="chatbubble-ellipses-sharp"  (click)="openModal()"></ion-icon>
+</ion-col>
+<ion-col size="2">
+<ion-icon name="arrow-redo-sharp"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+<ion-col size="1">
+<ion-icon name="star-sharp" style="color: #FFC107;"></ion-icon>
+</ion-col>
+</ion-row>
+</ion-grid>
 
-      <ion-card-title class="ion-text-center">58 Tour Eiffel Restaurant </ion-card-title>
-      <ion-card-subtitle class="ion-text-center">200 m loin de vous</ion-card-subtitle>
-  
-  
-  </ion-card>
+
+<hr width="100%"  style=" background-color:  #00424746 !important; ">
+<div class="commentaires" *ngFor="let comment of endroit.commentaire">
+   <ion-row class="ion-no-padding ion-no-margin ">
+    <ion-col size="2"  class="ion-no-padding ion-no-margin ">
+      <img class="imgProfilPoster" src="{{comment.image}}" />
+    </ion-col>
+    <ion-col size="9">
+      <p class="nomProfil"  >{{comment.nom}}</p>
+      <p class="commentaire">{{comment.commentaire}}  </p>
+    </ion-col>
+</ion-row> 
 
 
+
+</div>
+      </ion-card-content>
+    </ion-card>
 </div>
 </ion-content>

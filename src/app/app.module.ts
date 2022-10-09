@@ -14,24 +14,31 @@ import { environment } from '../environments/environment';
 // storage module
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { Drivers, Storage } from '@ionic/storage';
+import{AngularFirestoreModule , SETTINGS} from '@angular/fire/firestore';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     IonicModule.forRoot(),
+    
     IonicStorageModule.forRoot({
       name: '__mydb',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [
+  providers: [LocalNotifications,
   
    
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {provide : SETTINGS, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 ion-content {
 
---background: url(/assets/img/backImageCon.png) no-repeat center/cover fixed;
+--background: url(/assets/img/backImage.PNG) no-repeat center/cover fixed;
     --ion-border: none;
   }
   
@@ -30,7 +30,7 @@ ion-content {
   ion-input{
    
     --placeholder-opacity :1;
-    --color: #004247;
+    --color: #0097C1;
     --padding-bottom: 10px;
     --padding-top: 15px;
     font-size: 15px;
@@ -42,14 +42,14 @@ ion-content {
   
     --padding-bottom: 0px;
     --highlight-height:0;
-    --highlight-color-valid: #004247;
+    --highlight-color-valid: #0097C1;
     --min-height: 65px;
     -webkit-padding-start: 0; 
     display: block;
     align-self: center; 
     align-items: center;
-    color:#004247;
-    --highlight-color-focused:#004247;
+    color:#0097C1;
+    --highlight-color-focused:#0097C1;
     --border-color:#D36C6C;
   }
   [linespace]{
@@ -65,7 +65,7 @@ ion-content {
     display: block;
   }
   .ion-button-class{
-    --background  :#004247 !important;
+    --background  :#D36C6C !important;
     border-radius: 19px;
   
     color: white !important;
@@ -81,10 +81,10 @@ ion-content {
   .forgetpassword{
     margin: 12px 0  30px 0;
     cursor: pointer;
-    color: #004247;
+    color: #0097C1;
   }
   .ion-text-center{
-    color: #004247; 
+    color: #0097C1; 
     cursor: pointer;
    
   }

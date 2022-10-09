@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { Client } from 'src/app/services/data/Client';
+import { ConnexionPage } from '../connexion/connexion.page';
 
 @Component({
   selector: 'app-inscription',
@@ -84,7 +85,7 @@ export class InscriptionPage implements OnInit {
     
    InscriptionPage.nom =this.registForm.value.prenom;
    
-    this.router.navigate(['/home/']);
+   this.router.navigate(['/connexion']);
     
 
   }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "smartguidedata": {
+      "hosting": {
+        "app": [
+          "smartguidedata"
+        ]
+      }
+    }
+  }
+}

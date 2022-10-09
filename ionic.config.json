@@ -1,7 +1,8 @@
 {
   "name": "MySmartGuide",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

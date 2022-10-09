@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-size: 12px;">
+      Ajouter une proposition
+    </ion-title>
+   <ion-buttons slot="end">
+     <ion-button (click)="dismissModal()">Fermer</ion-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card class="avis">
+
+  <ion-card-header>
+    <ion-card-subtitle>Rédiger une proposition </ion-card-subtitle>
+  
+  </ion-card-header>
+ 
+ 
+  <input [formControl]="avis" type="text" placeholder="Une nouvelle proposition pour les observations des enseignants ? "/>
+  <ion-button [disabled]="avis.invalid" type="submit"  expand="block" (click)="onSubmit()" >Publier</ion-button>
+
+</ion-card>
+</ion-content>
