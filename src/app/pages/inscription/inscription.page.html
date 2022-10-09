@@ -7,7 +7,7 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-card class="ion-no-margin">
     <ion-img src="../../assets/img/logo.png"></ion-img>
     <ion-card-header>
@@ -39,11 +39,14 @@
     </ion-item>
     <ion-item>
       <ion-input type="password" name="confmdp" formControlName="confmdp" placeholder="Confirmer mot de passe" required></ion-input>
-     
+      <div *ngFor="let error of errorMessages.mdp">
+        <ng-container *ngIf=" !(mdp == confmdp)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+     </div> 
     </ion-item> 
-    </form>
    </div>
-   <ion-button [disabled]="!registForm.valid"   type="submit" fill="solid" class="btnregister" (click)="submit()">
+   <ion-button [disabled]="!registForm.valid"  (ngSubmit)="submit()" type="submit" fill="solid" class="btnregister">
     Valider
   </ion-button>
  </ion-card-content>

@@ -6,7 +6,7 @@ ion-tabs, ion-toolbar, ion-header{
 
 
 ion-content{
-  --ion-background-color: #0097C1 !important;
+  --ion-background-color: #004247 !important;
 }
 
 ion-tab-button {
@@ -15,9 +15,8 @@ ion-tab-button {
 }
 ion-tab-button{
   ion-img{
-    margin-top: 20px;
-      width: 110px;
-   
+      width: 80px;
+     height: 180px;
   }
 }
 
@@ -51,20 +50,13 @@ ion-segment{
     color: #D36C6C !important;
   }
 }
-.publier{
-  border-radius: 12px;
-  // border: 1px solid black;
-  border: none;
- padding: 4px;
-  box-shadow: 0px 0px 5px rgb(35, 34, 34);
-}
 
 .MARGIN{
   margin-right: 25px !important;
 }
 .quote{
  ion-card-content{
-  background-color: #ffffff !important;
+  background-color: #D36C6C !important;
   border-radius: 12px;
   position: relative;
   top: -14px;
@@ -123,74 +115,4 @@ ion-card-subtitle{
 .commentaire{
   font-size: 10px;
   color: #7A8FA6;
-}
-.heart:hover{
-  color:#D36C6C;
-  cursor: pointer;
-}
-.heart::after{
-  color: #D36C6C;
-}
-.heart:focus{
-  color: #D36C6C;
-}
-
-
-.postActualite{
-// border: 2px solid #D36C6C;
-//    padding: 10px;
-color: white;
-  // margin: 20px  15px;
-  
-  .imgProfilPoster{
-      border-radius: 300px ; 
-       width: 30px ;
-       height: 30px;
-       margin-top: 10px;
-       margin-left: 10px;
-   };
-.entete{
-  --border-color:#6A6A6A;
-  padding: 0;
-  margin: 0;
-};
- 
-  #itemInput {
-       border-radius: 40px 40px 40px 40px;
-       background-color: #0097C1;
-      // height: 27px;
-      // width: 170px;
-        padding: 0 10px !important;
-       color: white ;
-       font-size: 12px;
-       margin-left: 5px;
-     // margin-top: 8px;
-      //margin-right: 10px;
-
-   }
-
-
- #PostInput{
-  //background-color: #2B2B2B;
-  padding: 0 10px !important;
-  height: 60px; 
-  --padding-top:0;
-  color: white ;
-  font-size: 12px; 
-  margin-top: 10px;
-  border-radius: 5px 5px 0 0 ;
- }   
-}  
-.titreAnnonce{
-  font-weight: bold;
-// position:absolute;
-// right: 0;
-color: rgb(255, 255, 255);
-font-size: 11px;
-ion-item{
-  width:100%;
-  height:100%;
- 
-}
-
 }

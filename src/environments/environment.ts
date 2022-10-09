@@ -4,16 +4,16 @@
 
 export const environment = {
   production: false,
-  firebaseConfig : {
-    apiKey: "AIzaSyBEDT1lq4gZ4cuLOx_nwYitTq5BGiUf0F8",
-    authDomain: "smartguidedata.firebaseapp.com",
-    projectId: "smartguidedata",
-    storageBucket: "smartguidedata.appspot.com",
-    messagingSenderId: "145810367890",
-    appId: "1:145810367890:web:0f1a4a553f30c0b9f20d4b",
-    measurementId: "G-NKFXNZVEKQ"
-  }
-}
+  firebase: {
+    apiKey: "AIzaSyCW0pIep6TMhYxp-TSJlsUg6MpZ4dMRV7I",
+  authDomain: "ionic-login-695c2.firebaseapp.com",
+  projectId: "ionic-login-695c2",
+  storageBucket: "ionic-login-695c2.appspot.com",
+  messagingSenderId: "942339477494",
+  appId: "1:942339477494:web:2e6f44cac96e246d9241d7",
+  measurementId: "G-CRJQQM9QMD"}
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

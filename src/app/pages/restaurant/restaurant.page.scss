@@ -13,113 +13,58 @@ ion-tabs, ion-toolbar, ion-header{
   
     color: #004247 !important;
   }
-  .destinationJour{
-    ion-card{
-      --background: white !important;
-     // text-align:justify
-    }
-  }
-  ion-card-title{
-    color: #D36C6C;
-    font-size:18px ;
-  }
-  ion-card-subtitle{
-    color: #BABDC9;
-    font-size:12px ;
-  }
-  .detail{
-    color: #D36C6C;
-    text-decoration: underline;
-    // position: absolute;
-   margin-left: 80px;
   
-  
-  }
-  .bold{
-    font-weight: bold;
-  }
-  .imagePost{
-    border-radius: 12px;
-  }
-  
-  
-    .imgProfilPoster{
-      color: #004247;
-        border-radius: 300px ; 
-        //  width: 30px ;
-        //  height: 30px;
-        //  margin-top: 10px;
-        //  margin-left: 10px;
-     };
-  .entete{
-    --border-color:#6A6A6A;
-    padding: 0;
-    margin: 0;
-  }
-  .nomProfil{
+
+.titreEntete{
+
+    background-color: #ffffffc2 !important;
+ 
+    position: absolute;
+    top: 26%;
+ 
+width: 100%;
+height: 40px;
     color: #004247;
-    font-size: 11px;
-    font-weight: bold;
-   // margin-left: 7px;
-  }
-  .commentaire{
-    font-size: 10px;
-    color: #7A8FA6;
-  }
-  .heart:hover{
-    color:#D36C6C;
-    cursor: pointer;
-  }
-  .heart::after{
-    color: #D36C6C;
-  }
-  .heart:focus{
-    color: #D36C6C;
-  }
-  
-  
-  .postActualite{
-    border: 2px solid black;
-  //    padding: 10px;
-  
-    // margin: 20px  15px;
     
-    .imgProfilPoster{
-        border-radius: 300px ; 
-         width: 30px ;
-         height: 30px;
-         margin-top: 10px;
-         margin-left: 10px;
-     };
-  .entete{
-    --border-color:#6A6A6A;
-    padding: 0;
-    margin: 0;
-  };
+}
+
+.quote{
+    box-shadow: none;
+    ion-card-content{
+        padding: 3px 3px 3px 17px !important;
+     background-color: white !important;
+     border-radius: 48px;
+     position: relative;
+     top: -14px;
+     color: #004247 !important;
+    }
    
-    #itemInput {
-         border-radius: 40px 40px 40px 40px;
-         background-color: #2B2B2B;
-         height: 27px;
-         width: 170px;
-          padding: 10px !important;
-         color: white ;
-         font-size: 12px;
-         margin-left: 5px;
-        margin-top: 8px;
-        margin-right: 10px;
-  
-     }
-  
-  
-   #PostInput{
-    background-color: #2B2B2B;
-    padding: 0 10px !important;
-    height: 60px; 
-    --padding-top:0;
-    color: white ;
-    font-size: 12px; 
-    margin-top: 10px;
-    border-radius: 5px 5px 0 0 ;
-   }   
-  }  
+   }
+.filtre{
+    span{
+        color: #ffffff;
+        font-weight: bold;
+    
+    }
+    ion-select{
+      
+        background-color:#D36C6C;
+        color: #ffffff;
+      
+    }
+}
+.resto{
+    ion-card{
+        background-color: #ffffff;
+    }
+    ion-card-title{
+        font-family: Aldhabi ;
+        color: #D36C6C;
+        font-size: 25px;
+    }
+    ion-card-subtitle{
+        color: #004247;
+        font-size:11px ;
+        font-weight: 200;
+    }
+}

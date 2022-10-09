@@ -6,15 +6,14 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
- 
-  {
-    path: '',
-    redirectTo: 'connexion',
-    pathMatch: 'full'
-  },
   {
     path: 'menu',
     loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'connexion',
@@ -26,20 +25,14 @@ const routes: Routes = [
     path: 'inscription',
     loadChildren: () => import('./pages/inscription/inscription.module').then( m => m.InscriptionPageModule)
   },
- 
   {
-    path: 'restaurant/:id',
-    loadChildren: () => import('./pages/restaurant/restaurant.module').then(m=>m.RestaurantPageModule)
+    path: 'details',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   },
-
-  // {
-  //   path: 'fiche-info',
-  //   loadChildren: () => import('./pages/fiche-info/fiche-info.module').then( m => m.FicheInfoPageModule)
-  // },
   {
-    path:'details-eleve/:id',
-    loadChildren:()=>import('./pages/details-eleve/details-eleve.module').then(m=> m.DetailsElevePageModule)
-  }
+    path: 'restaurant',
+    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
 
 ];
 

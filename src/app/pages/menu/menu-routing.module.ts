@@ -19,16 +19,24 @@ const routes: Routes = [
        
       },
       {
-        path : 'fiche-info',
+        path : 'favoris',
         children : [
           {
             path : '',
-        loadChildren: () => import('../fiche-info/fiche-info.module').then(m=>m.FicheInfoPageModule)
+        loadChildren: () => import('./favoris/favoris.module').then( m => m.FavorisPageModule)
       }
     ]
    
       },
-      
+      {
+        path : 'profil',
+        children : [
+          {
+            path : '',
+        loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
+      }
+    ]
+      },
       {
         path : 'recherche',
         children : [
@@ -38,7 +46,6 @@ const routes: Routes = [
       }
     ]
       },
-     
       
       {
         path:'',

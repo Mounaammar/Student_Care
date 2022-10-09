@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
-import { Client } from 'src/app/services/data/Client';
 
 @Component({
   selector: 'app-connexion',
@@ -12,14 +11,13 @@ import { Client } from 'src/app/services/data/Client';
 })
 export class ConnexionPage implements OnInit {
   constructor(private service:AuthService, private fb:FormBuilder, private router:Router , private route:ActivatedRoute,public alertController: AlertController) { }
-  onClickRegister(){
+  onClickRegisterpp(){
     this.router.navigate(['/inscription']);
     
   }
   
   nom : string="";
-  public static recupNom : string="";
-  public static recupUser: string="";
+  recupNom : string="";
   get email(){
     return this.loginForm.get('email');
   }
@@ -65,11 +63,10 @@ export class ConnexionPage implements OnInit {
     }
    if (b==true)
    {
-  ConnexionPage.recupNom = AuthService.bdd.get(i).prenom +" "+ AuthService.bdd.get(i).nom ;
-  ConnexionPage.recupUser=AuthService.bdd.get(i).role;
+   this.recupNom = AuthService.bdd.get(i).prenom ;
    }
  
-   this.router.navigate(['/menu']);
+   this.router.navigate(['/menu/' +this.recupNom ]);
   }else{
   console.log("email ou mot de passe erroné");
   console.log(this.service.getbdd.length);
